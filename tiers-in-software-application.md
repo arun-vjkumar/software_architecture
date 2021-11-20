@@ -1,4 +1,6 @@
-### Tiers In Software Application
+# Tiers In Software Application
+-------------------------------
 
-## **One Tier Application **
-----------------------------
+### **One Tier Application **
+
+
