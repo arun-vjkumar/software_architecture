@@ -2,8 +2,8 @@ package com.application.communications.service;
 
 import com.application.communications.enums.Vendor;
 
-public interface EmailClientInterface {
+public interface NotificationClientInterface {
     Vendor getVendor();
 
-    void sendMail();
+    void sendNotification();
 }

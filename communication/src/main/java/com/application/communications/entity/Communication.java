@@ -1,31 +1,28 @@
 package com.application.communications.entity;
 
-
+import com.application.communications.enums.CommunicationType;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
 @Entity
-@Table(name = "communication")
+@Table(name = "communications")
 public class Communication extends AuditDetails {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CommunicationIdGenerator")
-    @SequenceGenerator(name = "CommunicationIdGenerator", sequenceName = "CommunicationId", allocationSize = 1)
-    @Column(name = "id", nullable = false, updatable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "event", nullable = false, updatable = false)
-    private String event;
+    @Column(name = "name", nullable = false, updatable = false)
+    private String name;
 
     @Column(name = "status", nullable = false)
     private String status;
 
-    @Column(name="type", nullable = false)
-    private String type;
-
-    @Column(name = "vendor", nullable = false)
-    private String vendor;
+    @Column(name="types", nullable = false)
+    private List<CommunicationType> types;
 }
