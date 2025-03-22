@@ -47,10 +47,6 @@ public class CommunicationServiceImpl implements CommunicationService {
         throw new RuntimeException();
     }
 
-    private CommunicationLogDto buildCommunicationLog() {
-        return CommunicationLogDto.builder().build();
-    }
-
     private SendCommunicationResponseDto buildSendCommunicationResponseDto(CommunicationLogDto communicationLogDto) {
         return SendCommunicationResponseDto.builder()
                 .id(communicationLogDto.getId())

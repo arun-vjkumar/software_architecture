@@ -1,7 +1,10 @@
 package com.application.communications.entity;
 
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -9,6 +12,9 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "communication_logs")
 public class CommunicationLog extends AuditDetails {
     @Id
