@@ -1,11 +1,17 @@
 package com.application.communications.dto.response;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.springframework.http.HttpStatus;
 
+@Getter
+@Builder
+@NoArgsConstructor
 @AllArgsConstructor
 public class HttpApiResponse<T> {
-    HttpStatus status;
-    T data;
-    ErrorObject error;
+    private HttpStatus status;
+    private T data;
+    private ErrorObject error;
 }
